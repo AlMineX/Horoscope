@@ -3,7 +3,10 @@ switch($action)
 {
     case'reponse':
     {
-        echo'Partie à coder';
+        var_dump ($_REQUEST);
+        $liste = $_REQUEST['liste'];
+
+        include 'views/reponse.php';
     break;
     }
     default:

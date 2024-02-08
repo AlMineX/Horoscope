@@ -6,23 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <form action="">
-        <select name="liste" id="">
-            <option value="">Bélier</option>
-            <option value="">Taureau</option>
-            <option value="">Gémeaux</option>
-            <option value="">Cancer</option>
-            <option value="">Lion</option>
-            <option value="">Vierge</option>
-            <option value="">Balence</option>
-            <option value="">Scorpion</option>
-            <option value="">Sagitaire</option>
-            <option value="">Capricorne</option>
-            <option value="">Verseau</option>
-            <option value="">Poissons</option>
-        </select>
-        <input type="submit" value="Envoyer">
-    </form>
-</body>
-</html>
+<form action="index.php?action=reponse" method="post">
+    <select name="liste" id="liste">
+    <?php foreach ($signe as $cle => $valeur) :?>
+            <option value="<?= $cle?>"><?= $cle?></option>
+            <?php endforeach ?>
+    </select>
+    <input type="submit" value="Valider">
+</form>
+        </body>
+        </html>
